@@ -1,0 +1,93 @@
+* {                                    /*Ye rule sabhi elements ka default margin aur padding ko 0 kar deta hai, aur sabhi text ko ek simple sans-serif font mein dikhata hai.*/
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {               /*.banner section poore screen ka width (100%) aur height (100vh, jo ki viewport ka 100% hai) cover karta hai.*/
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('badroom.jpg');
+    background-size: cover;               /*image ko banner ke size ke hisaab se stretch ya shrink kiya jata hai,*/
+    background-position: center;
+}
+
+.navbar {            /* navigation bar ko style karta hai.*/
+    width: 85%;     
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;     /**/
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;      /*list items ek line mein horizontally dikhayi dete hain. */
+    margin: 0 20px;              /* list items ke beech 20px ka space diya jata hai.*/
+    position: relative;          /*position related effects apply kar sakte hain (jo hum hover effect mein use karenge).*/
+}
+
+.navbar ul li a {
+    text-decoration: none;       /* links ka underline hata diya jata hai.*/
+    color: white;                 /*text color white ho jata hai.*/
+}
+
+.navbar ul li::after {          /*pseudo-element use karke har list item ke neeche ek line create hoti hai.*/
+    content: '';
+    height: 1px;
+    width: 0%; 
+    background: darkgray;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%; 
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    color:antiquewhite;
+    text-align: center;
+}
+
+.content p {
+   margin: 20px auto;
+   font-weight: 100;
+   line-height: 25px;
+   color: aliceblue;
+   text-align: center;
+
+}
+
+button {
+    position: relative;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid brown;
+    background-color:brown;
+    color: white;
+    cursor: pointer; 
+}
+
+button:hover span {
+    width: 100%;  
+}
+
+button:hover {
+    border: none;
+    background-color:brown;
+}
